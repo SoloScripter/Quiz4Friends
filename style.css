@@ -1,0 +1,102 @@
+@import url('https://fonts.cdnfonts.com/css/open-sans');
+
+*{
+    font-family: 'Lato', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 100vh;
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(130deg, #080452, #025464);
+}
+
+.main{
+    width: 100%;
+    max-width: 700px;
+    height: 550px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+.main h1{
+    padding-bottom: 20px;
+    font-family: 'Open Sans Condensed', sans-serif; 
+    font-size: 2rem;
+}
+
+.main .questions{
+    padding: 20px 0;
+    font-size: 22px;
+}
+
+.main #options{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.main #options .choices{
+    height: 40px;
+    width: 100%;
+    background: none;
+    font-size: 20px;
+    border: 1px solid black;
+    border-radius: 40px;
+    transition: 0.3s ease;
+}
+
+.main #options .choices:hover:not([disabled]){
+    background: #025464;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    font-size: 21px;
+    border: none;
+    color: white;
+}
+
+.main #quiz #options .choices:active:not([disabled]){
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.7);
+}
+
+.main #options .choices:disabled{
+    cursor: no-drop;
+}
+
+.main #options .choices.correct-ans{
+    background: #6aff7d7a;
+}
+
+.main #options .choices.wrong-ans{
+    background: #da1b1ba4;
+}
+
+.main .next-btn{
+    border-radius: 20px;
+    padding: 10px 20px;
+    position: relative;
+    display: none;
+    left: 42%;
+    width: 100px;
+    margin: 20px 0 0 0;
+    background: transparent;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.main .next-btn:hover{
+    background-color: #025464;
+    color: white;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    font-size: 14px;
+}
+
+.main .next-btn:active{
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+}
